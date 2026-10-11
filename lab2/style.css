@@ -1,0 +1,99 @@
+body {
+    font-family:'Segoe UI', Arial, sans-serif;
+    background: #f4f1ea;
+    color:#2c2c2c;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #3b2f5c;
+    margin-top: 0;
+}
+
+a {
+    color: #7c5cbf;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #c9bfa8;
+    padding: 10px 14px;
+}
+
+.header {
+    background: #3b2f5c;
+    color: #f4f1ea;
+    padding: 20px 40px;
+}
+
+.header h1 {
+    color: #f4f1ea;
+    margin: 0;
+}
+
+.nav {
+    background: #5a4a85;
+    padding: 10px 40px;
+}
+
+.nav a {
+    color: #f4f1ea;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: #ffd76e;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    
+}
+
+.region-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    display: block;
+    margin: 15px 0;
+}
+
+#main-title {
+    font-size: 2.2em;
+    letter-spacing: 2px;
+}
+
+#footer {
+    text-align: center;
+    padding: 20px;
+    background: #3b2f5c;
+    color: #f4f1ea;
+    margin-top: 50px;
+}
+
+.table-left   { text-align: left; }
+.table-center { text-align: center; }
+.table-right  { text-align: right; }
+
+.content p:first-letter {
+    font-size: 1.4em;
+    color: #7c5cbf;
+}
