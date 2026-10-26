@@ -43,12 +43,8 @@
 - В таблице архонтов сделано разное выравнивание: `.table-left`, `.table-center`, `.table-right`.
 
 ## Как запустить локально?
-
 Склонировать репозиторий:
-   ```bash
-   git clone https://github.com/sadrieva18/web6405-sadrieva_er.git
-
----
+git clone https://github.com/sadrieva18/web6405-sadrieva_er.git
 
 # Лабораторная работа №3
 
