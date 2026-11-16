@@ -3,6 +3,8 @@
  * @param {*} n
  */
 function isInteger(n) {
+    if (typeof n !== 'number' || !isFinite(n)) 
+        return false;
     return (n | 0) === n;
 }
 
@@ -22,10 +24,11 @@ function even() {
  * @param {*} n
  */
 function sumTo(n) {
+    n = Number(n); 
+    if (isNaN(n) || n < 0) 
+        return null;
     let sum = 0;
-    for (let i = 0; i <= n; i++){
-        sum += i;
-    }
+    for (let i = 0; i <= n; i++) sum += i;
     return sum;
 }
 
@@ -34,9 +37,13 @@ function sumTo(n) {
  * @param {*} n
  */
 function recSumTo(n) {
-    if (n === 1)
+    if (typeof n !== 'number' || n < 0) 
+        return null;
+    if (n === 0) 
+        return 0;
+    if (n === 1) 
         return 1;
-    return n + recSumTo(n-1);
+    return n + recSumTo(n - 1);
 }
 
 /**
@@ -44,9 +51,11 @@ function recSumTo(n) {
  * @param {*} n
  */
 function factorial(n) {
-    if (n === 1 || n === 0)
+    if (typeof n !== 'number' || n < 0) 
+        return null;
+    if (n === 0 || n === 1) 
         return 1;
-    return n * factorial(n-1);
+    return n * factorial(n - 1);
 }
 
 /**
@@ -54,7 +63,7 @@ function factorial(n) {
  * @param {*} n
  */
 function isBinary(n) {
-    if (n <= 0)
+    if (typeof n !== 'number' || !isFinite(n) || n <= 0)
         return false;
     while (n % 2 === 0){
         n = n/2;
@@ -67,6 +76,8 @@ function isBinary(n) {
  * @param {*} n
  */
 function fibonacci(n) {
+    if (typeof n !== 'number' || !isFinite(n) || n < 0)  
+        return null;
     if (n <= 2) 
         return 1; 
     let a = 1, b = 1;
