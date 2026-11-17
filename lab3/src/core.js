@@ -28,7 +28,8 @@ function sumTo(n) {
     if (isNaN(n) || n < 0) 
         return null;
     let sum = 0;
-    for (let i = 0; i <= n; i++) sum += i;
+    for (let i = 0; i <= n; i++) 
+        sum += i;
     return sum;
 }
 
@@ -152,28 +153,18 @@ function sequence(start = 0, step = 1) {
  * deepEqual({arr: [22, 33], text: 'text'}, {arr: [22, 3], text: 'text2'}) // false
  */
 function deepEqual(firstObject, secondObject) {
-    // Проверка на NaN 
     if (firstObject !== firstObject && secondObject !== secondObject) 
         return true;
-    
-    // Если это одно и то же значение или примитив
     if (firstObject === secondObject) 
         return true;
-    
-    // Если хотя бы один из них не объект или равен null, а второе не совпало в предыдущем шаге
     if (typeof firstObject !== 'object' || firstObject === null || 
         typeof secondObject !== 'object' || secondObject === null) {
         return false;
     }
-    
     const keys1 = Object.keys(firstObject);
     const keys2 = Object.keys(secondObject);
-    
-    // Если количество ключей разное, объекты не равны
     if (keys1.length !== keys2.length) 
         return false;
-    
-    // Рекурсивно проверяем каждое свойство
     for (let key of keys1) {
         if (!keys2.includes(key) || !deepEqual(firstObject[key], secondObject[key])) {
             return false;
@@ -182,7 +173,6 @@ function deepEqual(firstObject, secondObject) {
     
     return true;
 }
-
 module.exports = {
     isInteger,
     even,
